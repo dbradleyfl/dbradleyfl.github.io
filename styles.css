@@ -1,0 +1,19 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.social-links a, .social-links a:hover, .social-links a:visited{
+  color: black;
+}
+
+.social-links a:hover{
+  font-size: 1.2em;
+}
+
+.margin-top-20{
+  margin-top: 20px;
+}
+
+.margin-top-50{
+  margin-top: 50px;
+}
