@@ -2,22 +2,16 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-.social-links a, .social-links a:hover, .social-links a:visited{
-  color: black;
+a {
+  text-decoration: none;
 }
 
-.social-links a:hover{
-  font-size: 1.2em;
+.links {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
 }
 
-.margin-top-20{
-  margin-top: 20px;
-}
-
-.margin-top-50{
-  margin-top: 50px;
-}
-
-.margin-bottom-50{
-  margin-bottom: 50px;
+.fa-circle {
+  color: #61A0B1;
 }
