@@ -4,24 +4,29 @@ import {
   asset,
   StyleSheet,
   Pano,
+  Scene,
   Text,
   View,
 } from 'react-vr';
+
+import InfoCard from './components/InfoCard';
 
 export default class PortfolioVR extends React.Component {
   constructor () {
     super();
     this.state = {
-
+      openingLink: null,
+      showPortfolioItems: false,
     }
   }
 
   render() {
     let {textColor} = this.state;
     return (
-      <View pointerEvents="auto">
+      <Scene>
         <Pano source={asset('lake.jpg')} style={{transform: [{rotateY: 165}]}}/>
-      </View>
+        <InfoCard />
+      </Scene>
     );
   }
 };
