@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Devon Bradley</title>
-
+    <style>body { margin: 0; }</style>
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="57x57" href="https://secure.gravatar.com/avatar/8c0f0c68e8f4f3087b0af8e2b6e24ce0?s=57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="https://secure.gravatar.com/avatar/8c0f0c68e8f4f3087b0af8e2b6e24ce0?s=60.png">
@@ -24,54 +24,23 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="https://secure.gravatar.com/avatar/8c0f0c68e8f4f3087b0af8e2b6e24ce0?s=144.png">
     <meta name="theme-color" content="#ffffff">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-
-    <!-- Font Family -->
-    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
-
-    <!-- Custom Styles -->
-    <link rel="stylesheet" href="styles.css" media="screen" title="no title" charset="utf-8">
-
-    <!-- aframe -->
-    <script 
-src="https://aframe.io/releases/0.3.2/aframe.min.js"></script>
   </head>
   <body>
-    <a-scene>
-      <a-sky src="/img/ob-360.jpg" rotation="0 190 0"></a-sky>
-    </a-scene>
-    <div class="links">
-      <a href="https://github.com/dbradleyfl" target="_blank">
-        <span class="fa-stack fa-lg fa-3x">
-          <i class="fa fa-circle fa-stack-2x"></i>
-          <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-        </span>
-      </a><br>
-      <a href="https://twitter.com/devonsbradley" target="_blank">
-        <span class="fa-stack fa-lg fa-3x">
-          <i class="fa fa-circle fa-stack-2x"></i>
-          <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-        </span>
-      </a><br>
-      <a href="https://medium.com/@devonsbradley" target="_blank">
-        <span class="fa-stack fa-lg fa-3x">
-          <i class="fa fa-circle fa-stack-2x"></i>
-          <i class="fa fa-medium fa-stack-1x fa-inverse"></i>
-        </span>
-      </a><br>
-      <a href="https://linkedin.com/in/devonsbradley" target="_blank">
-        <span class="fa-stack fa-lg fa-3x">
-          <i class="fa fa-circle fa-stack-2x"></i>
-          <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-        </span>
-      </a>
-    </div>
-
-    </div>
-
-    <!-- Google Analytics -->
+    <!-- When you're ready to deploy your app, update this line to point to your compiled client.bundle.js -->
+    <script src="./client.bundle.js?platform=vr"></script>
+    <script>
+      // Initialize the React VR application
+      ReactVR.init(
+        // When you're ready to deploy your app, update this line to point to
+        // your compiled index.bundle.js
+        './index.bundle.js?platform=vr',
+        // Attach it to the body tag
+        document.body,
+        {
+          cursorVisibility: 'visible',
+        }
+      );
+    </script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
