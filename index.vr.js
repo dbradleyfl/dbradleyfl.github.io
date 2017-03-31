@@ -10,23 +10,31 @@ import {
 } from 'react-vr';
 
 import InfoCard from './components/InfoCard';
+import PopUpModal from './components/PopUpModal';
 
 export default class PortfolioVR extends React.Component {
   constructor () {
     super();
     this.state = {
-      openingLink: null,
       showPortfolioItems: false,
+      modal: null
     }
+  }
+
+  setModal (data) {
+    this.setState({modal: data});
   }
 
   render() {
     let {textColor} = this.state;
     return (
-      <Scene>
+      <View>
         <Pano source={asset('lake.jpg')} style={{transform: [{rotateY: 165}]}}/>
-        <InfoCard />
-      </Scene>
+        <InfoCard setModal={this.setModal.bind(this)} />
+        { this.state.modal &&
+          <PopUpModal modal={this.state.modal} setModal={this.setModal.bind(this)} style={{position: "absolute"}} />
+        }
+      </View>
     );
   }
 };

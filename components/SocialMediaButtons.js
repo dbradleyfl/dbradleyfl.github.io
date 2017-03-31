@@ -16,9 +16,13 @@ export default class SocialMediaButtons extends React.Component {
     };
 
     return <View style={{flexDirection: "row", justifyContent: "space-between", margin: 0.05, marginTop: 0.1, marginBottom: 0.15}}>
-      <SocialMediaButton name="github" socialLogoStyle={socialLogoStyle} handleEnter={this.props.handleEnter} handleExit={this.props.handleExit} />
-      <SocialMediaButton name="twitter" socialLogoStyle={socialLogoStyle} handleEnter={this.props.handleEnter} handleExit={this.props.handleExit}/>
-      <SocialMediaButton name="linkedin" socialLogoStyle={socialLogoStyle} handleEnter={this.props.handleEnter} handleExit={this.props.handleExit}/>
+
+      <SocialMediaButton name="github" title="Github" body="My handle is @dbradleyfl. The Github site doesn't yet support WebVR, nor does WebVR support link traversal... so I can't send you there, yet." linkAddress="https://github.com/dbradleyfl" socialLogoStyle={socialLogoStyle} handleEnter={this.props.handleEnter} handleExit={this.props.handleExit} setModal={this.props.setModal} />
+
+      <SocialMediaButton name="twitter" title="Twitter" body="My handle is @devonsbradley. The Twitter site doesn't yet support WebVR, nor does WebVR support link traversal... so I can't send you there, yet." linkAddress="https://www.twitter.com/devonsbradley" socialLogoStyle={socialLogoStyle} handleEnter={this.props.handleEnter} handleExit={this.props.handleExit} setModal={this.props.setModal}/>
+
+      <SocialMediaButton name="linkedin" title="Linkedin" body="My handle is @devonsbradley. The Linkedin site doesn't yet support WebVR, nor does WebVR support link traversal... so I can't send you there, yet." linkAddress="https://linkedin.com/in/devonsbradley" socialLogoStyle={socialLogoStyle} handleEnter={this.props.handleEnter} handleExit={this.props.handleExit} setModal={this.props.setModal}/>
+
     </View>
   }
 }

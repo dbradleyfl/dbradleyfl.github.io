@@ -14,7 +14,9 @@ export default class ShowProjectsButton extends React.Component {
     let {handleEnter, handleExit} = this.props;
     let showProjectsButtonStyles = {
       backgroundColor: "white",
-      padding: 0.01
+      padding: 0.01,
+      borderWidth: .02,
+      borderColor: "black"
     };
 
     return <RiseHover handleEnter={handleEnter} handleExit={handleExit}>
