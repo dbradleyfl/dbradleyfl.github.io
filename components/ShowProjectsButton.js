@@ -20,7 +20,7 @@ export default class ShowProjectsButton extends React.Component {
     };
 
     return <RiseHover handleEnter={handleEnter} handleExit={handleExit}>
-      <VrButton style={showProjectsButtonStyles}>
+      <VrButton style={showProjectsButtonStyles} onClick={this.props.handleClick}>
         <Text style={{
           color: "black",
           fontSize: 0.15,
@@ -31,7 +31,7 @@ export default class ShowProjectsButton extends React.Component {
           textAlign:'center',
           textAlignVertical:'center',
         }}>
-          Projects
+          {this.props.showing ? "Hide" : "Show"} Projects
         </Text>
       </VrButton>
     </RiseHover>

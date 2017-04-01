@@ -11,9 +11,9 @@ export default class RiseHover extends React.Component {
     }
   }
   render() {
-    let viewStyle = this.state.gazeEnabled ? {transform: [{translate : [0, 0, 0.2]}]} : {transform: [{translate : [0, 0, 0]}]};
+    let viewStyle = this.state.gazeEnabled ? {transform: [{scale: 1.1}]} : {transform: [{scale : 1}]};
 
-    return <View onEnter={this.props.handleEnter.bind(this)} onExit={this.props.handleExit.bind(this)}  style={viewStyle}>
+    return <View onEnter={this.props.handleEnter.bind(this)} onExit={this.props.handleExit.bind(this)} style={viewStyle}>
       {this.props.children}
     </View>
   }

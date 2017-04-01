@@ -17,7 +17,6 @@ export default class PopUpModal extends React.Component {
   }
 
   componentDidMount () {
-    console.log('mounted');
     Animated.timing(
       this.state.opacity
     ,{
