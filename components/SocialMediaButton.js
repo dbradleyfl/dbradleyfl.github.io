@@ -9,8 +9,8 @@ import {
 import RiseHover from './RiseHover';
 
 export default class SocialMediaButton extends React.Component {
-  handleClick (title, body) {
-      this.props.setModal({title, body});
+  handleClick (title, body, linkAddress) {
+      this.props.setModal({title, body, linkAddress});
   }
 
   render() {
@@ -19,7 +19,7 @@ export default class SocialMediaButton extends React.Component {
     };
 
     return <RiseHover handleEnter={this.props.handleEnter} handleExit={this.props.handleExit}>
-      <VrButton style={buttonStyle} onClick={() => {this.handleClick(this.props.title, this.props.body)}}>
+      <VrButton style={buttonStyle} onClick={() => {this.handleClick(this.props.title, this.props.body, this.props.linkAddress)}}>
         <Image source={asset(this.props.name +'.png')} style={buttonStyle} />
       </VrButton>
     </RiseHover>

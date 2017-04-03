@@ -6,7 +6,9 @@ import {
   View,
   VrButton,
 } from 'react-vr';
+import { Linking } from 'react-native';
 
+import RiseHover from './RiseHover';
 
 export default class PopUpModal extends React.Component {
   constructor (props) {
@@ -30,7 +32,13 @@ export default class PopUpModal extends React.Component {
   }
 
   goToLink (address) {
-    window.location.assign("https://google.com");
+    Linking.openURL(this.props.modal.linkAddress).catch(()=>{
+      this.props.setModal({
+        title: "Failed to Open Link",
+        body: "Sorry about that. I couldn't open that link for you. You are probably using a VR browser of some kind right now, and link traversal is currently an issue in WebVR."
+      })
+    });
+    this.resetModal();
   }
 
   render() {
@@ -54,6 +62,13 @@ export default class PopUpModal extends React.Component {
         </VrButton>
         <Text style={{fontSize: 0.15, color: "black", textDecorationLine: "underline", textDecorationStyle: "solid", textDecorationColor: "black"}}>{this.props.modal.title}</Text>
         <Text style={{fontSize: 0.12, color: "black"}}>{this.props.modal.body}</Text>
+        { this.props.modal.linkAddress &&
+          <RiseHover>
+            <VrButton style={{alignSelf: "center", backgroundColor: "black", marginTop: 0.1, height: 0.25, width: 0.5, alignItems: "center", transform: [{translateZ: .01}]}} onClick={this.goToLink.bind(this)}>
+              <Text style={{fontSize: 0.15, color: "white", padding: 0, margin: 0}}>Go</Text>
+            </VrButton>
+          </RiseHover>
+        }
       </Animated.View>
     );
   }

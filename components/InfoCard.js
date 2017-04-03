@@ -10,7 +10,6 @@ import {
 
 import SocialMediaButtons from './SocialMediaButtons';
 import ShowProjectsButton from './ShowProjectsButton';
-import Card from './Card';
 
 export default class InfoCard extends React.Component {
   constructor (props) {
@@ -28,13 +27,6 @@ export default class InfoCard extends React.Component {
       delay: 1000,
     }).start()
   }
-  handleEnter () {
-    this.setState({gazeEnabled: true});
-  }
-
-  handleExit () {
-    this.setState({gazeEnabled: false});
-  }
 
   render() {
     let nameStyle = {
@@ -45,19 +37,15 @@ export default class InfoCard extends React.Component {
     };
 
     return (
-      <Animated.View style={{opacity: this.state.opacity, alignItems: "center", transform: [{translate: [-1.1, 1.7, -5]}]}}>
-        <Card />
-
+      <Animated.View style={{opacity: this.state.opacity, backgroundColor: "rgba(46, 46, 46, 0.5)", alignItems: "center", height: 3.3, width: 2, transform: [{translate: [-1.1, 1.7, -5]}]}}>
         <View style={{
-            height: 3.2,
             transform: [{translate: [0, 0, .2]}],
-            width: 2,
           }}>
           <Image source={asset('me.jpg')} style={{marginTop: .2, alignSelf: "center", width: 1.5, height: 1.5}}/>
           <Text style={nameStyle}>Devon Bradley</Text>
           <Text style={{...nameStyle, marginTop: -.05, fontSize: .15}}>Software Engineer</Text>
-          <SocialMediaButtons handleEnter={this.handleEnter} handleExit={this.handleExit} setModal={this.props.setModal}/>
-          <ShowProjectsButton handleEnter={this.handleEnter} handleExit={this.handleExit} handleClick={this.props.showProjectsToggle.bind(this)} showing={this.props.showProjects} />
+          <SocialMediaButtons setModal={this.props.setModal}/>
+          <ShowProjectsButton handleClick={this.props.showProjectsToggle.bind(this)} showing={this.props.showProjects} />
         </View>
       </Animated.View>
     );
