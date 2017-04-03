@@ -39,7 +39,7 @@ export default class PopUpModal extends React.Component {
           backgroundColor: "#fff",
           height: "auto",
           opacity: 1,
-          transform: [{translate: [-1, .6, -4]}],
+          transform: [{translate: [-1.1, .6, -4]}],
           width: 2,
           padding: 0.1,
           paddingTop: 0.05,
