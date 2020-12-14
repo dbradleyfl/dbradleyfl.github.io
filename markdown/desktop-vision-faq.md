@@ -32,5 +32,5 @@
   - You can minimize latency by lowering the stream resolution via the settings modal on the computer controller page of the web app.
 - Gamepad input isn't being passed on to the game
   - Make sure there isn't another controller plugged into your desktop machine when you're trying to us a Desktop Vision emulated controller. The emulated controller may be detected as a secondary controller and ignored by the game you are attempting to play.
-- Support
+- Additional Support
   - Still need help? Contact [devon@desktop.vision](mailto:devon@desktop.vision) and I'll be happy to help!
