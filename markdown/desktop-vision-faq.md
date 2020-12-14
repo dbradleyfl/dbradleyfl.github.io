@@ -21,5 +21,16 @@
       - Oculus Quest (Oculus Browser)
         - VR Mode
         - Hand Tracking
+- Can Desktop Vision turn on my computer remotely
+  - No. If your computer is off, Desktop Vision currently cannot connect to it.
+- Can Desktop Vision unlock my computer remotely
+  - Windows
+    - No. You *can* leave your desktop computer unlocked if you wish to connect to it at any time remotely, otherwise you can manually unlock it before a Desktop Vision session. We hope to make this easier in the future.
+  - Mac
+    - Yes. You can unlock your computer remotely if it is connected to the internet, on, and Desktop Vision is running. All you have to do is type in your password as you normally do.
+- Gamestreaming has lag / latency
+  - You can minimize latency by lowering the stream resolution via the settings modal on the computer controller page of the web app.
+- Gamepad input isn't being passed on to the game
+  - Make sure there isn't another controller plugged into your desktop machine when you're trying to us a Desktop Vision emulated controller. The emulated controller may be detected as a secondary controller and ignored by the game you are attempting to play.
 - Support
   - Still need help? Contact [devon@desktop.vision](mailto:devon@desktop.vision) and I'll be happy to help!
