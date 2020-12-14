@@ -1,0 +1,25 @@
+- Supported Operating Systems / Browsers
+  - Streamer App
+    - Windows 10
+      - Audio streaming supported
+      - Gamepad eumlation supported (with Vigem)
+    - MacOS
+      - Audio streaming supported (only with soundflower)
+  - Web App
+    - Desktop
+      - Any chromium based browser (Google Chrome, Edge, Brave, Vivaldi)
+      - Safari
+    - Mobile
+      - Android
+        - Chrome
+          - Has 6dof AR Mode
+        - Most other popular browsers
+      - iOS
+        - Safari / Chrome
+          - AR mode is stripped down here due to limitations of the browser / operating system
+    - VR
+      - Oculus Quest (Oculus Browser)
+        - VR Mode
+        - Hand Tracking
+- Support
+  - Still need help? Contact [devon@desktop.vision](mailto:devon@desktop.vision) and I'll be happy to help!
